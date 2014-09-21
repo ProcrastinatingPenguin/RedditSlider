@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Reddit Slids</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+    #viewer {
+        height: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #container {
+        width: 100%;
+        height: auto;
+        background-color: #F5F5F5;
+    }
+    #tagline {
+        text-align: center;
+        padding-top: 5px;
+    }
+    #buttons {
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 80%;
+    }
+    #right {
+        float: right;
+    }
+    #left {
+        float: left;
+    }
+    #top {
+        background-color: #1D9F75;
+        height: 10%;
+        border-bottom: 1px solid #1B926C;
+        width: 100%;
+    }
+    #title {
+        font-size: 40px;
+        color: white;
+        margin-top: 10px;
+        float: left;
+    }
+    #droper {
+        float: right;
+        padding-right: 30px;
+        padding-top: 30px;
+        color: white;
+    }
+    #nav {
+        display: none;
+        height: 8%;
+        background-color: #1B926C;
+        color: white;
+        padding-top: 1%;
+    }
+    #padded {
+        padding: 5px;
+        float: left;
+    }
+    #search {
+        padding: 5px;
+        float: right;
+        margin-right: 30px;
+    }
+    #padded span {
+        margin-left: 20px;
+        padding-top: 15px;
+    }
+</style>
+
+<body>
+    <div id="top">
+        <span id="title"> Reddit Slider /r/<span id="sub"></span></span>
+
+        <span id="droper" onclick="drop()"> Drop </span>
+    </div>
+    <div id="nav">
+        <span id="padded">
+        <span onclick="changeSub('funny')">Funny </span>
+        <span onclick="changeSub('aww')">Aww </span>
+        <span onclick="changeSub('whiski')">Whiski </span>
+        </span>
+        <span id="search">
+            <input type="text" id="searchbar" placeholder="Enter A Subreddit eg. aww"> <input type = "submit" onclick="search()">
+        </span>
+    </div>
+    <div id="container">
+        <img id="viewer" src="http://jimpunk.net/Loading/wp-content/uploads/loading1.gif">
+    </div>
+    <div id="tagline">
+    </div>
+    <div id="buttons">
+        <span id="left"></span>
+        <span onclick="next()" id="right">Next</span>
+        <span onclick="previous()" id="right">Previous &nbsp;</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
